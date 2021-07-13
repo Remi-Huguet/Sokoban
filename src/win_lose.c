@@ -48,7 +48,7 @@ int is_blocked(char **map, int i, int y)
     return (-1);
 }
 
-int lose(char **map, int *coord_O)
+int lose(char **map)
 {
     int i = 0;
     int nb_x = count_x(map);
@@ -67,7 +67,7 @@ int win_or_lose(char **map, int *coord_O)
 {
     if (win(map, coord_O) == 0)
         return (end_game(0));
-    if (lose(map, coord_O) == 0)
+    if (lose(map) == 0)
         return (end_game(1));
     return (2);
 }

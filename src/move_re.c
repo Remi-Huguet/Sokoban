@@ -6,7 +6,7 @@
 */
 #include "../include/sokoban.h"
 
-int move_up(char **map, int lgs, int tempo, int command)
+int move_up(char **map, int lgs, int tempo)
 {
     if (map[lgs - 1][tempo] == 'X') {
         if (lgs - 2 < 0)
@@ -22,7 +22,7 @@ int move_up(char **map, int lgs, int tempo, int command)
     return (0);
 }
 
-int move_down(char **map, int lgs, int tempo, int command)
+int move_down(char **map, int lgs, int tempo)
 {
     int i = 0;
 
@@ -42,7 +42,7 @@ int move_down(char **map, int lgs, int tempo, int command)
     return (0);
 }
 
-int move_right(char **map, int lgs, int tempo, int command)
+int move_right(char **map, int lgs, int tempo)
 {
     if (map[lgs][tempo - 1] == 'X') {
         if (tempo - 2 < 0)
@@ -58,7 +58,7 @@ int move_right(char **map, int lgs, int tempo, int command)
     return (0);
 }
 
-int move_left(char **map, int lgs, int tempo, int command)
+int move_left(char **map, int lgs, int tempo)
 {
     if (map[lgs][tempo + 1] == 'X') {
         if (tempo + 2 > my_strlen(map[lgs]) - 1)

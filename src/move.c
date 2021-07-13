@@ -13,7 +13,7 @@ int up(char **map, int lgs, int tempo, int command)
             return (0);
         if (map[lgs - 1][tempo] == '#')
             return (0);
-        move_up(map, lgs, tempo, command);
+        move_up(map, lgs, tempo);
     }
     return (0);
 }
@@ -25,7 +25,7 @@ int down(char **map, int lgs, int tempo, int command)
             return (0);
         if (map[lgs + 1][tempo] == '#')
             return (0);
-        move_down(map, lgs, tempo, command);
+        move_down(map, lgs, tempo);
     }
     return (0);
 }
@@ -37,7 +37,7 @@ int right(char **map, int lgs, int tempo, int command)
             return (0);
         if (map[lgs][tempo - 1] == '#')
             return (0);
-        move_right(map, lgs, tempo, command);
+        move_right(map, lgs, tempo);
     }
     return (0);
 }
@@ -49,7 +49,7 @@ int left(char **map, int lgs, int tempo, int command)
             return (0);
         if (map[lgs][tempo + 1] == '#')
             return (0);
-        move_left(map, lgs, tempo, command);
+        move_left(map, lgs, tempo);
     }
     return (0);
 }

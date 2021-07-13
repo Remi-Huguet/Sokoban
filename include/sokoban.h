@@ -29,13 +29,13 @@ int up(char **map, int lgs, int tempo, int command);
 int down(char **map, int lgs, int tempo, int command);
 int right(char **map, int lgs, int tempo, int command);
 int left(char **map, int lgs, int tempo, int command);
-int move_up(char **map, int lgs, int tempo, int command);
-int move_down(char **map, int lgs, int tempo, int command);
-int move_right(char **map, int lgs, int tempo, int command);
-int move_left(char **map, int lgs, int tempo, int command);
+int move_up(char **map, int lgs, int tempo);
+int move_down(char **map, int lgs, int tempo);
+int move_right(char **map, int lgs, int tempo);
+int move_left(char **map, int lgs, int tempo);
 int get_pos(char **map, int *lgs, int *tempo);
 int is_blocked(char **map, int i, int y);
 int win(char **map, int *coord_O);
-int lose(char **map, int *coord_O);
+int lose(char **map);
 
 #endif /* !SOKOBAN_H_ */

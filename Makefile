@@ -20,19 +20,21 @@ SRC =		src/main.c		\
 		src/win_lose.c		\
 		src/fct.c
 
+OBJ =		$(SRC:.c=.o)
+
 NAME =		my_sokoban
 
 all:		$(NAME)
 
-$(NAME):
-		gcc -o $(NAME) $(SRC) -lncurses -g
+$(NAME):	$(OBJ)
+		gcc -o $(NAME) $(OBJ) $(CFLAGS) -lncurses
 
 clean:
-		rm -f $(OBJ)
+		$(RM) $(OBJ)
 		make -C tests/ clean
 
 fclean:		clean
-		rm -f $(NAME)
+		$(RM) $(NAME)
 		make -C tests/ fclean
 
 re:		fclean all
